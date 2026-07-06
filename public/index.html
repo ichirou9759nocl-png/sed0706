@@ -14,6 +14,42 @@
     background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
     background-size: 400% 400%;
     animation: gradientShift 6s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  .shooting-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #fff;
+    animation: shoot linear infinite;
+  }
+  .shooting-star::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, #fff, transparent);
+    transform: translateY(-50%);
+  }
+  @keyframes shoot {
+    0% {
+      transform: translate(0, 0) rotate(215deg);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-1200px, 900px) rotate(215deg);
+      opacity: 0;
+    }
   }
   h1 {
     font-size: 12vw;
@@ -53,6 +89,11 @@
 </style>
 </head>
 <body>
+<div class="shooting-star" style="top: 10%; left: 90%; animation-duration: 3s; animation-delay: 0s;"></div>
+<div class="shooting-star" style="top: 5%; left: 60%; animation-duration: 4s; animation-delay: 1.2s;"></div>
+<div class="shooting-star" style="top: 20%; left: 100%; animation-duration: 2.5s; animation-delay: 2.1s;"></div>
+<div class="shooting-star" style="top: 0%; left: 40%; animation-duration: 3.5s; animation-delay: 0.6s;"></div>
+<div class="shooting-star" style="top: 15%; left: 80%; animation-duration: 3.2s; animation-delay: 2.8s;"></div>
 <h1>Hello World</h1>
 <h2>こんにちは世界</h2>
 </body>
