@@ -8,6 +8,7 @@
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
@@ -27,6 +28,19 @@
       0 0 80px #ff8c00;
     animation: pulse 1.5s ease-in-out infinite;
   }
+  h2 {
+    font-size: 6vw;
+    font-weight: 900;
+    margin: 0.2em 0 0;
+    text-align: center;
+    color: #fff;
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #40e0d0,
+      0 0 40px #40e0d0,
+      0 0 80px #8a2be2;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
   @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -40,5 +54,6 @@
 </head>
 <body>
 <h1>Hello World</h1>
+<h2>こんにちは世界</h2>
 </body>
 </html>
